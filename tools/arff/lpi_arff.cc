@@ -527,6 +527,10 @@ int main(int argc, char *argv[])
 		printf("@relation '%s'\n", argv[i]);
 		printf("\n");
 		printf("@attribute label string\n");
+		printf("@attribute sip string\n");
+                printf("@attribute sport numeric\n");
+                printf("@attribute cip string\n");
+                printf("@attribute cport numeric\n");
 		printf("@attribute protocol numeric\n");
 		printf("@attribute fpackets numeric\n");
 		printf("@attribute fbytes numeric\n");
