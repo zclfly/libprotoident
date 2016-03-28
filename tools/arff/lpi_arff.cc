@@ -173,8 +173,8 @@ void display_ident(Flow *f, IdentFlow *ident)
 	f->id.get_client_ip_str(c_ip);
 
 	/* basic statistics */
-	printf("%s,%d,%" PRIu64 ",%" PRIu64 ",%" PRIu64 ",%" PRIu64,
-		proto->name, f->id.get_protocol(),
+	printf("%s,%s:%u,%s:%u,%d,%" PRIu64 ",%" PRIu64 ",%" PRIu64 ",%" PRIu64,
+		proto->name, s_ip,f->id.get_server_port(), c_ip,f->id.get_client_port(), f->id.get_protocol(),
 		ident->out.pkts, ident->out.bytes, ident->in.pkts, ident->in.bytes);
 
 	/* print packet length statistics */
